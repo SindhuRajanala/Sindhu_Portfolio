@@ -1,0 +1,691 @@
+
+
+
+*{
+    margin:0 ;
+    padding:0 ;
+    font-family: "Poetsen One", sans-serif;
+    box-sizing: border-box;
+    text-decoration: none;
+    border: none;
+    outline: none;
+    
+}
+:root{
+    --bg-color: #1f242d;
+    --second-bg-color: #323946;
+    --text-color:#fff;
+    --main-color:rgb(11, 228, 228);
+
+}
+
+html{
+    font-size: 62.5%;
+    scroll-behavior: smooth;
+}
+
+body{
+    background-color:  var(--bg-color);
+    color: var(--text-color);
+
+}
+section{
+    min-height: 100vh;
+    padding: 10rem 9% 2rem;
+}
+.header{
+    position:fixed ;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 2rem 9%;
+    background-color: var(--bg-color);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 100;
+}
+
+
+.header.sticky{
+    border-bottom: .1rem solid rgba(0,0,0,.2);
+}
+
+.logo{
+    font-size: 2.5rem;
+    color: var(--text-color);
+    font-weight: 400;
+    cursor: default;
+}
+
+.navbar{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.navbar a{
+    font-size: 1.8rem;
+    color: var(--text-color);
+    margin-left: 8rem;
+
+    
+}
+
+.navbar.active {
+    display: block; /* Show when 'active' class is added */
+}
+
+.navbar a:hover,
+.navbar a:active {
+
+    color: var(--main-color);
+}
+#menu-icon{
+    font-size: 2.6rem;
+    color: var(--text-color);
+    display:none;
+    cursor: pointer;
+    margin-right: 25%;
+}
+.home{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+.home-img img{
+    width: 25vw;
+    border-radius: 100%;
+    animation: floatImage 4s ease-in-out infinite;
+    
+}
+@keyframes floatImage{
+    0%{
+        transform: translateY(0);
+    }
+    50%{
+        transform: translateY(-2.4rem);
+    }
+    100%{
+        transform: translateY();
+    }
+
+    
+}
+.home-content h3{
+    font-size: 3.2rem;
+    font-weight: 400;
+}
+.home-content h3:nth-of-type(2) {
+    margin-bottom: 2rem;
+
+}
+span{
+    color: var(--main-color);
+}
+.home-content h1{
+    font-size: 5.6rem;
+    font-weight: 500;
+    line-height: 1.3;
+}
+.home-content p {
+   font-family: "Nunito";
+    font-size: 1.8rem;
+    font-weight: 600;
+}
+.social-media a{
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 5rem;
+    height:5rem ;
+    background: transparent;
+    border: .2rem solid var(--main-color);
+    border-radius: 50%;
+    font-size: 3rem;
+    color: var(--main-color);
+    margin: 3rem 1.5rem 3rem 0;
+    transition: .5s ease;
+
+}
+.social-media a:hover{
+    background: var(--main-color);
+    color: var(--second-bg-color);
+    box-shadow:0 0 1rem var(--main-color) ;
+}
+.btn{
+    display: inline-block;
+    padding: 1rem 2.8rem;
+    background: var(--main-color);
+    border-radius: 4rem;
+    box-shadow:0 0 1rem var(--main-color) ;
+    font-size: 1.8rem;
+    color: var(--second-bg-color);
+    font-weight: 400;
+    transition: none;
+    margin-top: 2%;
+    
+
+}
+.btn:hover{
+    box-shadow: none;
+
+
+}
+/* About Section Styling */
+.about {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 80px 10%;
+    background: var(--second-bg-color);
+}
+
+/* About Image - Left Side */
+.about-img {
+    flex: 1;
+    display: flex;
+    justify-content: flex-start;
+}
+
+.about-img img {
+    width: 350px;
+    height: auto;
+    border-radius: 15px;
+    box-shadow: 0px 4px 10px rgba(5, 150, 247, 0.5);
+}
+
+/* About Content - Right Side */
+.about-content {
+    flex: 1;
+    text-align: left;
+    padding-left: 40px;
+}
+
+.about-content .heading {
+    font-size: 4rem;
+    color: aqua;
+    margin-bottom: 15px;
+}
+
+.about-content p {
+    font-size: 1.6rem;
+    line-height: 1.8;
+    color: #fff;
+    font-weight: 300;
+}
+
+/* Responsive Design */
+@media (max-width: 992px) {
+    .about {
+        flex-direction: column;
+        text-align: center;
+        padding: 60px 5%;
+    }
+
+    .about-content {
+        padding-left: 0;
+    }
+
+    .about-img {
+        justify-content: center;
+        margin-bottom: 20px;
+    }
+
+    .about-img img {
+        width: 280px;
+    }
+
+    .about-content .heading {
+        font-size: 3.5rem;
+    }
+
+    .about-content p {
+        font-size: 1.5rem;
+    }
+}
+
+/*Experience */
+.experience {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2%;
+    background: var(--second-bg-color);
+}
+
+.experience .heading {
+    text-align: center;
+    font-size: 4.5rem;
+    font-weight: 100;
+    color:aqua;
+}
+
+.experience-content {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.experience-box {
+    background: var(--second-bg-color);
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0px 4px 10px rgba(5, 150, 247, 0.932);
+    transition: transform 0.3s ease-in-out;
+}
+
+.experience-box:hover {
+    transform: translateY(-5px);
+}
+
+.experience-box h3 {
+    font-family: "Nunito";
+    font-size: 1.5rem;
+    color: #fff;
+    margin-bottom: 10px;
+}
+
+.experience-box p {
+    font-family: "Nunito";
+    font-size: 1.2rem;
+    color: #fff;
+    margin-bottom: 10px;
+    font-style: italic;
+}
+
+.experience-box ul {
+    padding-left: 20px;
+    list-style-type: disc;
+}
+
+.experience-box ul li {
+    font-size: 1.1rem;
+    color: #fff;
+    line-height: 1.6;
+    margin-bottom: 5px;
+}
+
+@media (max-width: 768px) {
+    .experience {
+        padding: 60px 5%;
+    }
+    .experience-box {
+        padding: 15px;
+    }
+    .experience-box h3 {
+        font-size: 1.3rem;
+    }
+    .experience-box p,
+    .experience-box ul li {
+        font-size: 1rem;
+    }
+}
+
+/* Projects Section Styling - Zig Zag Layout */
+.project {
+    padding: 80px 10%;
+    background-color: var(--second-bg-color);
+}
+
+.project .heading {
+    text-align: center;
+    font-size: 4.5rem;
+    font-weight: bold;
+    color: var(--main-color);
+    margin-bottom: 50px;
+}
+
+
+.portfolio-box {
+    display: flex;
+    align-items: center;
+    background: var(--bg-color);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease-in-out;
+}
+
+.portfolio-box:nth-child(odd) {
+    flex-direction: row;
+}
+
+.portfolio-box:nth-child(even) {
+    flex-direction: row-reverse;
+}
+
+.portfolio-box:hover {
+    transform: translateY(-5px);
+}
+
+.image {
+    flex: 1;
+}
+
+.image img {
+    width: 50%;
+    height: auto;
+    border-radius: 8px;
+}
+
+.portfolio-layer {
+    flex: 1;
+    padding: 20px;
+}
+
+.portfolio-layer h4 {
+    font-family: "Nunito";
+    font-size: 2rem;
+    color: var(--main-color);
+    margin-bottom: 10px;
+}
+
+.portfolio-layer li {
+    font-family: "Nunito";
+    font-size: 1.4rem;
+    color: var(--text-color);
+    line-height: 1.6;
+    margin-bottom: 5px;
+}
+/* Skills Section Styling */
+.skills {
+    padding: 80px 10%;
+    background: var(--second-bg-color);
+    text-align: center;
+}
+
+.skills .heading {
+    font-size: 4.5rem;
+    font-weight: bold;
+    color: aqua;
+    margin-bottom: 30px;
+}
+
+/* Skills Container */
+.skills-container {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    align-items: center;
+}
+
+/* Individual Skill Box */
+.skill-box {
+    background: #222;
+    color: white;
+    padding: 15px 20px;
+    font-size: 1.4rem;
+    font-weight: bold;
+    border-radius: 8px;
+    width: 70%;
+    text-align: center;
+    transition: 0.3s ease-in-out;
+    cursor: pointer;
+    box-shadow: 0px 4px 8px rgba(0, 255, 255, 0.4);
+}
+
+/* Hover Effect */
+.skill-box:hover {
+    background: aqua;
+    color: black;
+    transform: scale(1.05);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .skill-box {
+        width: 90%;
+        font-size: 1.2rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .skill-box {
+        width: 100%;
+        font-size: 1.1rem;
+    }
+}
+/* Education Section Styling */
+.education {
+    padding: 80px 10%;
+    background: var(--second-bg-color);
+    text-align: center;
+}
+
+.education .heading {
+    font-size: 4.5rem;
+    font-weight: bold;
+    color: aqua;
+    margin-bottom: 40px;
+}
+
+/* Education Container */
+.education-container {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    align-items: center;
+}
+
+/* Individual Education Box */
+.education-box {
+    display: flex;
+    align-items: center;
+    background: #222;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 8px rgba(0, 255, 255, 0.4);
+    width: 70%;
+    transition: transform 0.3s ease-in-out;
+}
+
+.education-box:hover {
+    transform: translateY(-5px);
+}
+
+/* University Logo */
+.education-logo {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    margin-right: 20px;
+}
+
+/* University Name */
+.education-title a {
+    text-decoration: none;
+    color: aqua;
+    font-size: 1.8rem;
+    font-weight: bold;
+    transition: color 0.3s ease-in-out;
+}
+
+.education-title a:hover {
+    color: white;
+}
+
+/* Degree & Duration */
+.education-degree {
+    font-size: 1.4rem;
+    color: #bbb;
+}
+
+.education-duration {
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: white;
+    display: block;
+    margin-top: 5px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .education {
+        padding: 60px 5%;
+    }
+
+    .education-box {
+        flex-direction: column;
+        align-items: center;
+        width: 90%;
+        text-align: center;
+        padding: 15px;
+    }
+
+    .education-logo {
+        margin-bottom: 10px;
+    }
+
+    .education-title a {
+        font-size: 1.6rem;
+    }
+
+    .education-degree,
+    .education-duration {
+        font-size: 1.2rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .education-box {
+        width: 100%;
+    }
+
+    .education-title a {
+        font-size: 1.4rem;
+    }
+
+    .education-degree,
+    .education-duration {
+        font-size: 1.1rem;
+    }
+}
+
+/* Footer (Contact Section) Styling */
+.contact {
+    background: var(--bg-color);
+    padding: 40px 10%;
+    text-align: center;
+    border-top: 2px solid var(--main-color);
+    margin-bottom: 0;
+}
+
+.contact .heading {
+    font-size: 3.5rem;
+    color: var(--main-color);
+    margin-bottom: 20px;
+}
+
+.social-media {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.social-media a {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 50px;
+    height: 50px;
+    background: var(--second-bg-color);
+    border-radius: 50%;
+    font-size: 2rem;
+    color: var(--main-color);
+    transition: 0.3s;
+}
+
+.social-media a:hover {
+    background: var(--main-color);
+    color: var(--bg-color);
+    transform: scale(1.1);
+}
+
+@media (max-width:991px) {
+    .header{
+        padding: 2rem 3%;
+    }
+
+    section{
+        padding: 10rem 3% 2rem;
+    }
+
+    .portfolio{
+        padding-bottom: 7rem;
+    }
+    .navbar{
+        display:flex;
+    }
+
+    
+}
+
+@media (max-width:768px){
+    #menu-icon{
+    display: block;
+    }
+     .navbar{
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        padding: 1rem 3%;
+        background: var(--bg-color);
+        border-top: .1rem solid rgba(0,0,0,.2);
+        box-shadow: 0.5rem 1rem rgba(0,0,0,.2);
+        display: none;
+     }
+     .navbar.active{
+     display: block;
+     }
+
+     .navbar a{
+        display: block;
+        font-size: 2rem;
+        margin: 3rem 0;
+
+     }
+     .home{
+        flex-direction: column;
+     }
+     .home-content h3{
+        font-size: 2.6rem;
+     }
+     .home-content h1{
+        font-size: 5rem;
+     }
+     .home-img img{
+        width: 60vw;
+     }
+     .about{
+        flex-direction: column-reverse;
+
+     }
+     .about-img{
+        width: 60vw;
+        margin-top: 4rem;
+     }
+     
+     .portfolio-container{
+        grid-template-columns: repeat(2,1fr);
+     }
+
+    .navbar{
+        display:flex;
+    }
+}
+
+@media (max-width:450px){
+    html{
+        font-size: 50%;
+    }
+    .contact form .input-box input{
+        width: 100%;
+
+    }
+    
+}
+
+
