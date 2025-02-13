@@ -1,123 +1,92 @@
-/* Global Reset */
-* {
-    margin: 0;
-    padding: 0;
+
+
+
+*{
+    margin:0 ;
+    padding:0 ;
     font-family: "Poetsen One", sans-serif;
     box-sizing: border-box;
     text-decoration: none;
     border: none;
     outline: none;
+    
 }
-
-:root {
+:root{
     --bg-color: #1f242d;
     --second-bg-color: #323946;
-    --text-color: #fff;
-    --main-color: rgb(11, 228, 228);
+    --text-color:#fff;
+    --main-color:rgb(11, 228, 228);
+
 }
 
-html {
+html{
     font-size: 62.5%;
     scroll-behavior: smooth;
 }
 
-/* Body */
-body {
-    background-color: var(--bg-color);
+body{
+    background-color:  var(--bg-color);
     color: var(--text-color);
-}
 
-/* Section */
-section {
+}
+section{
     min-height: 100vh;
-    padding: 10rem 5%;
+    padding: 10rem 9% 2rem;
 }
-
-/* Header */
-.header {
-    position: fixed;
+.header{
+    position:fixed ;
     top: 0;
     left: 0;
     width: 100%;
-    padding: 2rem 5%;
+    padding: 2rem 9%;
     background-color: var(--bg-color);
     display: flex;
     justify-content: space-between;
     align-items: center;
-    z-index: 1000;
-    transition: 0.3s ease-in-out;
+    z-index: 100;
 }
 
-/* Sticky Header */
-.header.sticky {
-    border-bottom: 0.1rem solid rgba(0, 0, 0, 0.2);
+
+.header.sticky{
+    border-bottom: .1rem solid rgba(0,0,0,.2);
 }
 
-/* Logo */
-.logo {
+.logo{
     font-size: 2.5rem;
     color: var(--text-color);
     font-weight: 400;
-    cursor: pointer;
+    cursor: default;
 }
 
-/* Navbar (Desktop View) */
-.navbar {
+.navbar{
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
-.navbar a {
+.navbar a{
     font-size: 1.8rem;
     color: var(--text-color);
-    margin-left: 4rem;
-    transition: color 0.3s ease-in-out;
+    margin-left: 8rem;
+
+    
+}
+
+.navbar.active {
+    display: block; /* Show when 'active' class is added */
 }
 
 .navbar a:hover,
 .navbar a:active {
+
     color: var(--main-color);
 }
-
-/* Mobile Menu Icon */
-#menu-icon {
+#menu-icon{
     font-size: 2.6rem;
     color: var(--text-color);
-    display: none;
+    display:none;
     cursor: pointer;
-    z-index: 1100;
-}
-
-/* Mobile Sidebar Menu */
-@media (max-width: 768px) {
-    #menu-icon {
-        display: block;
-    }
-
-    .navbar {
-        position: fixed;
-        top: 0;
-        left: -100%;
-        width: 70%;
-        height: 100vh;
-        background: var(--second-bg-color);
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-        padding: 2rem 0;
-        transition: left 0.3s ease-in-out;
-    }
-
-    .navbar.active {
-        left: 0;
-    }
-
-    .navbar a {
-        font-size: 2rem;
-        margin: 1rem 0;
-        display: block;
-    }
+    margin-right: 25%;
 }
 /*home */
 .home{
