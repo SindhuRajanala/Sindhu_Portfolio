@@ -61,14 +61,13 @@ section {
     cursor: pointer;
 }
 
-/* Navbar */
+/* Navbar (Desktop View) */
 .navbar {
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
-/* Navbar Links */
 .navbar a {
     font-size: 1.8rem;
     color: var(--text-color);
@@ -87,61 +86,37 @@ section {
     color: var(--text-color);
     display: none;
     cursor: pointer;
+    z-index: 1100;
 }
 
-/* Responsive Design */
-@media (max-width: 1024px) {
-    .header {
-        padding: 2rem 3%;
-    }
-    
-    .navbar a {
-        font-size: 1.6rem;
-        margin-left: 2rem;
-    }
-}
-
-/* Mobile View */
+/* Mobile Sidebar Menu */
 @media (max-width: 768px) {
     #menu-icon {
         display: block;
     }
 
     .navbar {
-        position: absolute;
-        top: 100%;
-        left: 0;
-        width: 100%;
-        background: var(--bg-color);
-        border-top: 0.1rem solid rgba(0, 0, 0, 0.2);
-        display: none;
+        position: fixed;
+        top: 0;
+        left: -100%;
+        width: 70%;
+        height: 100vh;
+        background: var(--second-bg-color);
         flex-direction: column;
         align-items: center;
-        padding: 1.5rem 0;
+        justify-content: center;
+        padding: 2rem 0;
+        transition: left 0.3s ease-in-out;
     }
 
     .navbar.active {
-        display: flex;
+        left: 0;
     }
 
     .navbar a {
         font-size: 2rem;
         margin: 1rem 0;
-    }
-}
-
-/* Smaller Mobile Screens */
-@media (max-width: 450px) {
-    html {
-        font-size: 55%;
-    }
-
-    .navbar a {
-        font-size: 1.8rem;
-    }
-
-    .logo {
-        font-size: 2rem;
+        display: block;
     }
 }
 /*home */
